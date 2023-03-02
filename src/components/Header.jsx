@@ -6,25 +6,50 @@ import { RiCheckboxBlankCircleFill, RiMenu3Fill, RiCloseLine } from "react-icons
 const Header = () => {
     const [showMenu, setShowMenu] = useState(false);
     return (
-     <header className="flex items-center justify-between xl:justify-start w-full p-4 h-[10vh] z-50">
-        <div className="xl:w-1/6 text-center">
-            <a href="#" className="text-2xl font-bold relative px-1 bg-white">
-                Camilo
-                <span className="text-primary text-5xl">.</span>
-                {""} <RiCheckboxBlankCircleFill className="absolute -left-2 -bottom-2 text-primary -z-10" />
-            </a>
+        <nav className="bg-gray-800 shadow-lg">
+        <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+            <div className="relative flex items-center  h-16">
+                <div className="float-right text-white text-2xl">
+                    <h1>Camilo Ortiz</h1>
+                </div>
+                <div className="float-left items-center justify-center flex-1">
+                <div className="hidden md:block">
+                    <div className="ml-10 flex items-baseline space-x-4">
+                    <a
+                        href="#"
+                        className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    >
+                        Home
+                    </a>
+    
+                    <a
+                        href="#"
+                        className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    >
+                        About
+                    </a>
+    
+                    <a
+                        href="#"
+                        className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    >
+                        Services
+                    </a>
+    
+                    <a
+                        href="#"
+                        className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    >
+                        Contact
+                    </a>
+                    </div>
+                </div>
+                </div>            
+            </div>
         </div>
-        <nav className={'bg-white fixed w-[80%] xl:w-full h-full ${showMenu ? "left-0" : "-left-full"} top-0 xl:static flex-1 flex flex-col xl:flex-row items-center  justify-center gap-10'}>
-            <a href="#" className="text-lg font-semibold">Home</a>
-            <a href="#" className="text-lg font-semibold">About Us</a>
-            <a href="#" className="text-lg font-semibold">Products</a>
-            <a href="#" className="text-lg font-semibold">Services</a>
-        </nav>
-        <button onClick={() => setShowMenu(!showMenu)} className="text-2xl p-2">
-            <RiMenu3Fill />
-        </button>
-    </header>
-    )
+      </nav>
+    );
+    
 };
 
 export default Header;
